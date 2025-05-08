@@ -1,0 +1,16 @@
+{
+    "posts": [
+        {
+            "id": "1",
+            "title": "novel",
+            "author": "wole soyinka",
+            "body": "a trial of brother jero"
+        },
+        {
+            "id": "2",
+            "title": "poem",
+            "author": "fagunwa",
+            "body": "forest of thousand demon"
+        }
+    ]
+}

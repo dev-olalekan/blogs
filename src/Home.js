@@ -18,6 +18,8 @@ const Home = () => {
     { title: "my port dock", body: "one tunnel", author: "olaleka", id: 3 },
   ]);
 
+  const [name, setName] = useState("romario");
+
   const handleDelete = (id) => {
     const newBlogs = blogs.filter((blog) => blog.id !== id);
     setBlogs(newBlogs);
@@ -26,7 +28,8 @@ const Home = () => {
   useEffect(() => {
     console.log("run okay");
     console.log(blogs);
-  });
+    console.log(name);
+  }, [name]);
 
   return (
     <div className="home">
@@ -35,6 +38,9 @@ const Home = () => {
         title="ALL for Bloger"
         handleDeletes={handleDelete}
       />
+
+      <button onClick={() => setName("adriano")}>click me</button>
+      <p>{name}</p>
       {/* <Bloglist
         blogprops={blogs.filter((blog) => blog.author == "olalekan")}
         title="ola news"
