@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
 import Bloglist from "./Bloglist";
+import useFetch from "./usefetch";
 
 const Home = () => {
-  const [blogs, setBlogs] = useState(null);
+  const {
+    datas: blogs,
+    isPending,
+    error,
+  } = useFetch("http://localhost:8000/blogs");
+  /* const [blogs, setBlogs] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
 
@@ -26,7 +32,7 @@ const Home = () => {
           setError(err.message);
         });
     }, 1000);
-  }, []);
+  }, []); */
 
   return (
     <div className="home">
